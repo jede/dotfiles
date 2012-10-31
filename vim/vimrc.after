@@ -1,0 +1,23 @@
+set visualbell
+
+"Split switching
+nmap <silent> <C-Up> :wincmd k<CR>
+nmap <silent> <C-Down> :wincmd j<CR>
+nmap <silent> <C-Left> :wincmd h<CR>
+nmap <silent> <C-Right> :wincmd l<CR>
+
+"Newlines on enter wo insert mode
+nmap <S-Enter> O<Esc>
+nmap <CR> o<Esc>
+
+"Clear highlights
+nnoremap <ESC> :nohlsearch<CR>
+
+
+" ruby-conque bindings
+"" Cmd-Shift-R for RSpec
+nmap <silent> <D-T> :call RunRspecCurrentFileConque()<CR>
+" Cmd-Shift-L for RSpec Current Line
+nmap <silent> <D-R> :call RunRspecCurrentLineConque()<CR>
+" Cmd-R for Last conque command
+nmap <silent> <D-E> :call RunLastConqueCommand()<CR>
