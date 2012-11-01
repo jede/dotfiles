@@ -1,6 +1,7 @@
 call janus#disable_plugin('snipmate')
 
 set visualbell
+set noswapfile
 
 set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*/tmp/*,*/.jhw-cache/*,*/node_modules/*,*/coverage/*
 
