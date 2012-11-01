@@ -13,4 +13,4 @@
 	url = git://github.com/godlygeek/tabular.git
 [submodule "vim/janus/vim-clojure"]
 	path = vim/janus/vim-clojure
-	url = git://github.com/godlygeek/tabular.git
+	url = git://github.com/vim-scripts/VimClojure.git
