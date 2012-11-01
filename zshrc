@@ -37,13 +37,15 @@ HISTSIZE=10000
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"  # This loads RVM into a shell session.
 
-hitch() {
-  command hitch "$@"
-  if [[ -s "$HOME/.hitch_export_authors" ]] ; then source "$HOME/.hitch_export_authors" ; fi
-}
-alias unhitch='hitch -u'
-# Uncomment to persist pair info between terminal instances
-hitch
+if (( $+commands[hitch] )) ; then
+  hitch() {
+    command hitch "$@"
+    if [[ -s "$HOME/.hitch_export_authors" ]] ; then source "$HOME/.hitch_export_authors" ; fi
+  }
+  alias unhitch='hitch -u'
+  # Uncomment to persist pair info between terminal instances
+  hitch
+fi
 
 export PATH=/Applications/Firefox.app/Contents/MacOS:/usr/local/android-sdks/tools:/usr/local/android-sdks/platform-tools:/usr/local/bin:/usr/local/sbin:/usr/local/mysql/bin:~/bin:$PATH
 export LSCOLORS="Excxfxdxbxegedabagacad"
@@ -53,9 +55,13 @@ if [ -f `brew --prefix`/etc/autojump ]; then
 fi
 
 export PROMPT=" %{$fg_no_bold[green]%}%%%{$fg_no_bold[default]%} "
-rvm_ruby='%{$fg[red]%}‹$(rvm-prompt i v g)›%{$reset_color%}'
-export RPROMPT="${current_dir} ${rvm_ruby} ${git_branch}"
+export RPROMPT="${current_dir} ${git_branch}"
+
+if (( $+commands[rvm] )) ; then
+  rvm_ruby='%{$fg[red]%}‹$(rvm-prompt i v g)›%{$reset_color%}'
+  export RPROMPT="${current_dir} ${rvm_ruby} ${git_branch}"
 
 
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
-__rvm_project_rvmrc
+  PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+  __rvm_project_rvmrc
+fi
