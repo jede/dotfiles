@@ -5,6 +5,9 @@
 [submodule "vim/janus/vim-conque"]
 	path = vim/janus/vim-conque
 	url = git://github.com/rson/vim-conque.git
+[submodule "vim/janus/vim-ruby-conque"]
+	path = vim/janus/vim-ruby-conque
+	url = git://github.com/skwp/vim-ruby-conque.git
 [submodule "vim/janus/vim-ragtag"]
 	path = vim/janus/vim-ragtag
 	url = git://github.com/tpope/vim-ragtag.git
@@ -14,3 +17,12 @@
 [submodule "vim/janus/vim-clojure"]
 	path = vim/janus/vim-clojure
 	url = git://github.com/vim-scripts/VimClojure.git
+[submodule "vim/janus/vim-indent-guides"]
+	path = vim/janus/vim-indent-guides
+	url = git://github.com/nathanaelkane/vim-indent-guides.git
+[submodule "vim/janus/vim-jade"]
+	path = vim/janus/vim-jade
+	url = git://github.com/digitaltoad/vim-jade.git
+[submodule "vim/janus/vim-powerline"]
+	path = vim/janus/vim-powerline
+	url = git://https://github.com/Lokaltog/vim-powerline.git
