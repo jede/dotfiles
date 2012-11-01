@@ -1,0 +1,10 @@
+
+[submodule "vim/janus/greplace.vim"]
+	path = vim/janus/greplace.vim
+	url = git://github.com/vim-scripts/greplace.vim.git
+[submodule "vim/janus/vim-conque"]
+	path = vim/janus/vim-conque
+	url = git://github.com/rson/vim-conque.git
+[submodule "vim/janus/vim-ragtag"]
+	path = vim/janus/vim-ragtag
+	url = git://github.com/tpope/vim-ragtag.git
