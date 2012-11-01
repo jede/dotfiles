@@ -8,3 +8,6 @@
 [submodule "vim/janus/vim-ragtag"]
 	path = vim/janus/vim-ragtag
 	url = git://github.com/tpope/vim-ragtag.git
+[submodule "vim/janus/tabular"]
+	path = vim/janus/tabular
+	url = git://github.com/godlygeek/tabular.git
