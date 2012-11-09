@@ -1,6 +1,8 @@
 defaults write -g ApplePressAndHoldEnabled -bool false
 defaults write NSGlobalDomain KeyRepeat -int 0
 
+defaults write org.vim.MacVim MMNativeFullScreen 0
+
 pwd=$PWD
 cd ~
 ln -s $pwd/vim/vimrc.before .vimrc.before
