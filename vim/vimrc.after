@@ -21,3 +21,8 @@ nmap <silent> <D-T> :call RunRspecCurrentFileConque()<CR>
 nmap <silent> <D-R> :call RunRspecCurrentLineConque()<CR>
 " Cmd-R for Last conque command
 nmap <silent> <D-E> :call RunLastConqueCommand()<CR>
+color molokai
+if has("gui_running")
+  set guifont=Inconsolata:h14
+endif
+
