@@ -57,6 +57,10 @@ fi
 export PROMPT=" %{$fg_no_bold[green]%}%%%{$fg_no_bold[default]%} "
 export RPROMPT="${current_dir} ${git_branch}"
 
+if (( $+commands[rbenv] )) ; then
+  eval "$(rbenv init -)"
+fi
+
 if (( $+commands[rvm] )) ; then
   rvm_ruby='%{$fg[red]%}‹$(rvm-prompt i v g)›%{$reset_color%}'
   export RPROMPT="${current_dir} ${rvm_ruby} ${git_branch}"
