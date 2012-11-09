@@ -7,6 +7,7 @@ ln -s $pwd/vim/vimrc.before .vimrc.before
 ln -s $pwd/vim/vimrc.after .vimrc.after
 ln -s $pwd/vim/janus .janus
 ln -s $pwd/zshrc .zshrc
+ln -s $pwd/gemrc .gemrc
 cd $pwd
 
 
