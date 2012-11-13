@@ -47,7 +47,10 @@ if (( $+commands[hitch] )) ; then
   hitch
 fi
 
-export PATH=/Applications/Firefox.app/Contents/MacOS:/usr/local/android-sdks/tools:/usr/local/android-sdks/platform-tools:/usr/local/bin:/usr/local/sbin:/usr/local/mysql/bin:~/bin:$PATH
+export PATH=/usr/local/bin:/usr/local/sbin:/usr/local/mysql/bin:~/bin:$PATH
+export PATH=/Applications/Firefox.app/Contents/MacOS:$PATH
+export PATH=/usr/local/share/npm/bin:$PATH
+
 export LSCOLORS="Excxfxdxbxegedabagacad"
 
 if [ -f `brew --prefix`/etc/autojump ]; then
