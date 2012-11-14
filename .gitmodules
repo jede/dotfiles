@@ -23,9 +23,6 @@
 [submodule "vim/janus/vim-jade"]
 	path = vim/janus/vim-jade
 	url = git://github.com/digitaltoad/vim-jade.git
-[submodule "vim/janus/vim-powerline"]
-	path = vim/janus/vim-powerline
-	url = git://https://github.com/Lokaltog/vim-powerline.git
 [submodule "vim/janus/greplace"]
 	path = vim/janus/greplace
 	url = git://github.com/vim-scripts/greplace.vim.git
