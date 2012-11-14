@@ -29,3 +29,6 @@
 [submodule "vim/janus/greplace"]
 	path = vim/janus/greplace
 	url = git://github.com/vim-scripts/greplace.vim.git
+[submodule "vim/janus/vim-jst"]
+	path = vim/janus/vim-jst
+	url = git://github.com/briancollins/vim-jst.git
