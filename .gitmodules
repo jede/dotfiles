@@ -29,3 +29,6 @@
 [submodule "vim/janus/vim-jst"]
 	path = vim/janus/vim-jst
 	url = git://github.com/briancollins/vim-jst.git
+[submodule "vim/janus/scss-syntax-vim"]
+	path = vim/janus/scss-syntax-vim
+	url = git://github.com/cakebaker/scss-syntax.vim.git
