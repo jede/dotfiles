@@ -32,3 +32,6 @@
 [submodule "vim/janus/vim-haml"]
 	path = vim/janus/vim-haml
 	url = git://github.com/tpope/vim-haml.git
+[submodule "vim/janus/html5"]
+	path = vim/janus/html5
+	url = git://github.com/othree/html5.vim.git
