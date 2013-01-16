@@ -1,4 +1,4 @@
---type-add=coffee=.coffee
---type-add=jst=.jst
+--type-set=coffee=.coffee
+--type-set=jst=.jst
 --type-add=jst=.ejs
 --ignore-dir=components
