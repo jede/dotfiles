@@ -1,4 +1,5 @@
 call janus#disable_plugin('snipmate')
+call janus#disable_plugin('scss')
 
 set visualbell
 set noswapfile

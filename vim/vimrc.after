@@ -25,6 +25,10 @@ nmap <silent> <D-E> :call RunLastConqueCommand()<CR>
 " Init ragtag for custom filetypes
 autocmd FileType jst call RagtagInit()
 
+" Find scss files
+autocmd BufNewFile,BufRead *.scss setf scss
+
+
 color molokai
 if has("gui_running")
   set guifont=Inconsolata:h14
