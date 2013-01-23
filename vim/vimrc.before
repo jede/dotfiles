@@ -3,7 +3,7 @@ call janus#disable_plugin('snipmate')
 set visualbell
 set noswapfile
 
-set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*/tmp/*,*/.jhw-cache/*,*/node_modules/*,*/coverage/*
+set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*/tmp/*,*/temp/*,*/.jhw-cache/*,*/node_modules/*,*/coverage/*
 
 set grepprg=ack\ --nogroup\ --nocolor
 "let g:CommandTAcceptSelectionTabMap=['<CR>']
@@ -25,3 +25,5 @@ endfunction
 
 "Don't let ctrl p switch working path
 let g:ctrlp_working_path_mode = 0
+
+au! BufNewFile,BufRead .html.ejs set filetype=html
