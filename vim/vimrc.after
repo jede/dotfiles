@@ -28,6 +28,8 @@ autocmd FileType jst call RagtagInit()
 " Find scss files
 autocmd BufNewFile,BufRead *.scss setf scss
 
+" Autosave on blur
+autocmd FocusLost * silent! wa
 
 color molokai
 if has("gui_running")
