@@ -72,3 +72,6 @@ if (( $+commands[rvm] )) ; then
   PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
   __rvm_project_rvmrc
 fi
+
+### Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"
