@@ -1,4 +1,5 @@
 --type-set=coffee=.coffee
 --type-set=jst=.jst
 --type-add=jst=.ejs
+--type-set=scss=.scss
 --ignore-dir=components
