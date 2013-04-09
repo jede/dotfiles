@@ -1,4 +1,5 @@
 set visualbell
+set iskeyword+=-
 
 "Split switching
 nmap <silent> <C-Up> :wincmd k<CR>
