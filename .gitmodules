@@ -35,3 +35,9 @@
 [submodule "vim/janus/html5"]
 	path = vim/janus/html5
 	url = git://github.com/othree/html5.vim.git
+[submodule "vim/janus/vim-nginx"]
+	path = vim/janus/vim-nginx
+	url = git://github.com/vim-scripts/nginx.vim.git
+[submodule "vim/janus/vim-multiple-cursors"]
+	path = vim/janus/vim-multiple-cursors
+	url = git@github.com:terryma/vim-multiple-cursors.git
