@@ -1,10 +1,13 @@
 call janus#disable_plugin('snipmate')
 call janus#disable_plugin('scss')
+call janus#disable_plugin('vimwiki')
+" code in the dark
+" call janus#disable_plugin('css-color')
 
 set visualbell
 set noswapfile
 
-set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*/tmp/*,*/temp/*,*/.jhw-cache/*,*/node_modules/*,*/coverage/*
+set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*/tmp/*,*/temp/*,*/.jhw-cache/*,*/node_modules/*,*/coverage/*,*/components/*
 
 set grepprg=ack\ --nogroup\ --nocolor
 "let g:CommandTAcceptSelectionTabMap=['<CR>']
