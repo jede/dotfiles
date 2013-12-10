@@ -24,7 +24,7 @@ ZSH_THEME="bira"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git osx rails3)
+plugins=(git osx autojump bower brew npm postgres)
 
 source $ZSH/oh-my-zsh.sh
 
