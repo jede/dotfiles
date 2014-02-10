@@ -64,6 +64,9 @@ if (( $+commands[rbenv] )) ; then
   eval "$(rbenv init -)"
 fi
 
+### Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"
+
 if (( $+commands[rvm] )) ; then
   rvm_ruby='%{$fg[red]%}‹$(rvm-prompt i v g)›%{$reset_color%}'
   export RPROMPT="${current_dir} ${rvm_ruby} ${git_branch}"
@@ -73,5 +76,3 @@ if (( $+commands[rvm] )) ; then
   __rvm_project_rvmrc
 fi
 
-### Added by the Heroku Toolbelt
-export PATH="/usr/local/heroku/bin:$PATH"
