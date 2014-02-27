@@ -7,7 +7,7 @@ call janus#disable_plugin('vimwiki')
 set visualbell
 set noswapfile
 
-set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*/tmp/*,*/temp/*,*/.jhw-cache/*,*/node_modules/*,*/coverage/*,*/components/*
+set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*/.tmp/*,*/tmp/*,*/temp/*,*/.jhw-cache/*,*/node_modules/*,*/coverage/*,*/components/*
 
 set grepprg=ack\ --nogroup\ --nocolor
 "let g:CommandTAcceptSelectionTabMap=['<CR>']
