@@ -32,6 +32,7 @@ autocmd BufNewFile,BufRead *.scss setf scss
 " Autosave on blur
 autocmd FocusLost * silent! wa
 
+set lsp=2
 color molokai
 if has("gui_running")
   set guifont=Inconsolata:h14
