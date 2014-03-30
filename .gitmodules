@@ -38,3 +38,6 @@
 [submodule "vim/janus/vim-csharp"]
 	path = vim/janus/vim-csharp
 	url = git@github.com:OrangeT/vim-csharp.git
+[submodule "vim/janus/vim-mustache-handlebars"]
+	path = vim/janus/vim-mustache-handlebars
+	url = git://github.com/mustache/vim-mustache-handlebars.git
