@@ -72,7 +72,7 @@ if (( $+commands[rvm] )) ; then
   export RPROMPT="${current_dir} ${rvm_ruby} ${git_branch}"
 
 
-  PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+  export PATH=$HOME/.rvm/bin:$PATH # Add RVM to PATH for scripting
   __rvm_project_rvmrc
 fi
 
