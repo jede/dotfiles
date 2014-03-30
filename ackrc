@@ -3,3 +3,7 @@
 --type-add=jst=.ejs
 --type-set=scss=.scss
 --ignore-dir=components
+--ignore-dir=.meteor
+--ignore-dir=.git
+--ignore-dir=node_modules
+--ignore-dir=.build
