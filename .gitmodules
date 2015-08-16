@@ -41,3 +41,9 @@
 [submodule "vim/janus/vim-mustache-handlebars"]
 	path = vim/janus/vim-mustache-handlebars
 	url = git://github.com/mustache/vim-mustache-handlebars.git
+[submodule "vim/janus/vim-eco"]
+	path = vim/janus/vim-eco
+	url = git@github.com:AndrewRadev/vim-eco.git
+[submodule "vim/janus/vim-cjsx"]
+	path = vim/janus/vim-cjsx
+	url = git@github.com:mtscout6/vim-cjsx.git
