@@ -2,8 +2,12 @@
 --type-set=jst=.jst
 --type-add=jst=.ejs
 --type-set=scss=.scss
---ignore-dir=components
 --ignore-dir=.meteor
 --ignore-dir=.git
 --ignore-dir=node_modules
+--ignore-dir=bower_components
+--ignore-dir=dist
+--ignore-dir=tmp
 --ignore-dir=.build
+--ignore-dir=.sass-cache
+--ignore-dir=out
