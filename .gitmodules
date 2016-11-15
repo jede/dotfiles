@@ -1,5 +1,4 @@
 
-[submodule "vim/janus/greplace.vim"]
 	path = vim/janus/greplace.vim
 	url = git://github.com/vim-scripts/greplace.vim.git
 [submodule "vim/janus/vim-ragtag"]
@@ -44,6 +43,6 @@
 [submodule "vim/janus/vim-cjsx"]
 	path = vim/janus/vim-cjsx
 	url = git@github.com:mtscout6/vim-cjsx.git
-[submodule "vim/janus/vim/janus/coffee-tags"]
-	path = vim/janus/vim/janus/coffee-tags
+[submodule "vim/janus/coffee-tags"]
+	path = vim/janus/coffee-tags
 	url = https://github.com/lukaszkorecki/CoffeeTags
