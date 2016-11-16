@@ -46,3 +46,6 @@
 [submodule "vim/janus/coffee-tags"]
 	path = vim/janus/coffee-tags
 	url = https://github.com/lukaszkorecki/CoffeeTags
+[submodule "vim/janus/vim-jsx"]
+	path = vim/janus/vim-jsx
+	url = git@github.com:mxw/vim-jsx.git

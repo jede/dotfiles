@@ -35,6 +35,6 @@ autocmd FocusLost * silent! wa
 set lsp=2
 color molokai
 if has("gui_running")
-  set guifont=Inconsolata:h14
+  set guifont=Inconsolata:h12
 endif
 

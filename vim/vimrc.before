@@ -30,4 +30,9 @@ endfunction
 "Don't let ctrl p switch working path
 let g:ctrlp_working_path_mode = 0
 
+let g:syntastic_javascript_checkers = ['jsxhint']
+
+let g:jsx_ext_required = 0
+
 au! BufNewFile,BufRead .html.ejs set filetype=html
+
