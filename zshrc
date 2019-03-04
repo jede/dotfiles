@@ -24,18 +24,23 @@ ZSH_THEME="bira"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git osx autojump bower brew npm postgres)
+plugins=(git osx autojump bower brew npm postgres jsontools)
 
 source $ZSH/oh-my-zsh.sh
 
+bindkey "[D" backward-word
+bindkey "[C" forward-word
+
+ZSH_THEME_GIT_PROMPT_PREFIX="%{$fg[green]%}[%{$fg[cyan]%}"
+ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color%}"
+ZSH_THEME_GIT_PROMPT_DIRTY="%{$fg[green]%}] %{$fg[yellow]%}*%{$reset_color%}"
+ZSH_THEME_GIT_PROMPT_CLEAN="%{$fg[green]%}]"
 # Customize to your needs...
 
 HISTFILE=~/.zsh_history
 SAVEHIST=10000
 HISTSIZE=10000
-
-
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"  # This loads RVM into a shell session.
+setopt hist_ignore_space
 
 if (( $+commands[hitch] )) ; then
   hitch() {
@@ -50,29 +55,41 @@ fi
 export PATH=/usr/local/bin:/usr/local/sbin:/usr/local/mysql/bin:~/bin:$PATH
 export PATH=/Applications/Firefox.app/Contents/MacOS:$PATH
 export PATH=/usr/local/share/npm/bin:$PATH
+export PATH=node_modules/.bin:$PATH
 
 export LSCOLORS="Excxfxdxbxegedabagacad"
+
+# Add environment variable COCOS_CONSOLE_ROOT for cocos2d-x
+export COCOS_CONSOLE_ROOT=/usr/local/cocos2d-x-3.8.1/tools/cocos2d-console/bin
+export PATH=$COCOS_CONSOLE_ROOT:$PATH
+
+# Add environment variable COCOS_TEMPLATES_ROOT for cocos2d-x
+export COCOS_TEMPLATES_ROOT=/usr/local/cocos2d-x-3.8.1/templates
+export PATH=$COCOS_TEMPLATES_ROOT:$PATH
+
+export POW_DOMAINS="dev,localhost,test"
 
 if [ -f `brew --prefix`/etc/autojump ]; then
   . `brew --prefix`/etc/autojump
 fi
 
-export PROMPT=" %{$fg_no_bold[green]%}%%%{$fg_no_bold[default]%} "
-export RPROMPT="${current_dir} ${git_branch}"
+PROMPT=' %{$fg_no_bold[cyan]%}■%{$fg_no_bold[default]%} '
+RPROMPT="${current_dir} ${git_branch}"
 
 if (( $+commands[rbenv] )) ; then
   eval "$(rbenv init -)"
 fi
 
-### Added by the Heroku Toolbelt
-export PATH="/usr/local/heroku/bin:$PATH"
+export NVM_DIR=~/.nvm
+source $(brew --prefix nvm)/nvm.sh
 
+
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 if (( $+commands[rvm] )) ; then
   rvm_ruby='%{$fg[red]%}‹$(rvm-prompt i v g)›%{$reset_color%}'
-  export RPROMPT="${current_dir} ${rvm_ruby} ${git_branch}"
+#  export RPROMPT="${current_dir} ${rvm_ruby} ${git_branch}"
 
-
-  export PATH=$HOME/.rvm/bin:$PATH # Add RVM to PATH for scripting
-  __rvm_project_rvmrc
+#  __rvm_project_rvmrc
 fi
+
 
