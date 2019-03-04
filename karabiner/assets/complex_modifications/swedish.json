@@ -1,0 +1,105 @@
+{
+  "title": "Swedish Umlaut",
+  "rules": [
+    {
+      "description": "Change option + h/j/k or option + [/'/; to å/ä/ö",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": { "key_code": "h", "modifiers": { "mandatory": [ "option" ], "optional": [ "caps_lock" ] } },
+          "to": [ { "key_code": "a", "modifiers": [ "left_option" ] } ]
+        },
+        {
+          "type": "basic",
+          "from": { "key_code": "h", "modifiers": { "mandatory": [ "option", "shift" ] } },
+          "to": [ { "key_code": "a", "modifiers": [ "left_option", "left_shift" ] } ]
+        },
+        {
+          "type": "basic",
+          "from": { "key_code": "j", "modifiers": { "mandatory": [ "option" ], "optional": [ "caps_lock" ] } },
+          "to": [
+            { "key_code": "u", "modifiers": [ "left_option" ] },
+            { "key_code": "a" },
+            { "key_code": "vk_none" }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": { "key_code": "j", "modifiers": { "mandatory": [ "option", "shift" ] } },
+          "to": [
+            { "key_code": "u", "modifiers": [ "left_option" ] },
+            { "key_code": "a", "modifiers": [ "left_shift" ] },
+            { "key_code": "vk_none" }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": { "key_code": "k", "modifiers": { "mandatory": [ "option" ], "optional": [ "caps_lock" ] } },
+          "to": [
+            { "key_code": "u", "modifiers": [ "left_option" ] },
+            { "key_code": "o" },
+            { "key_code": "vk_none" }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": { "key_code": "k", "modifiers": { "mandatory": [ "option", "shift" ] } },
+          "to": [
+            { "key_code": "u", "modifiers": [ "left_option" ] },
+            { "key_code": "o", "modifiers": [ "left_shift" ] },
+            { "key_code": "vk_none" }
+          ]
+        },
+
+
+
+        {
+          "type": "basic",
+          "from": { "key_code": "open_bracket", "modifiers": { "mandatory": [ "option" ], "optional": [ "caps_lock" ] } },
+          "to": [ { "key_code": "a", "modifiers": [ "left_option" ] } ]
+        },
+        {
+          "type": "basic",
+          "from": { "key_code": "open_bracket", "modifiers": { "mandatory": [ "option", "shift" ] } },
+          "to": [ { "key_code": "a", "modifiers": [ "left_option", "left_shift" ] } ]
+        },
+        {
+          "type": "basic",
+          "from": { "key_code": "quote", "modifiers": { "mandatory": [ "option" ], "optional": [ "caps_lock" ] } },
+          "to": [
+            { "key_code": "u", "modifiers": [ "left_option" ] },
+            { "key_code": "a" },
+            { "key_code": "vk_none" }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": { "key_code": "quote", "modifiers": { "mandatory": [ "option", "shift" ] } },
+          "to": [
+            { "key_code": "u", "modifiers": [ "left_option" ] },
+            { "key_code": "a", "modifiers": [ "left_shift" ] },
+            { "key_code": "vk_none" }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": { "key_code": "semicolon", "modifiers": { "mandatory": [ "option" ], "optional": [ "caps_lock" ] } },
+          "to": [
+            { "key_code": "u", "modifiers": [ "left_option" ] },
+            { "key_code": "o" },
+            { "key_code": "vk_none" }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": { "key_code": "semicolon", "modifiers": { "mandatory": [ "option", "shift" ] } },
+          "to": [
+            { "key_code": "u", "modifiers": [ "left_option" ] },
+            { "key_code": "o", "modifiers": [ "left_shift" ] },
+            { "key_code": "vk_none" }
+          ]
+        }
+      ]
+    }
+  ]
+}

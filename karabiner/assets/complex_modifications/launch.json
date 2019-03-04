@@ -1,0 +1,30 @@
+{
+  "title": "Launch apps",
+  "rules": [
+    {
+      "description": "Launch apps by HYPER + letter",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": { "key_code": "o", "modifiers": { "mandatory": [ "left_shift", "left_control", "left_option", "left_command" ], "optional": [ "caps_lock" ] } },
+          "to": [ { "shell_command": "open '/Applications/Spotify.app'" } ]
+        },
+        {
+          "type": "basic",
+          "from": { "key_code": "s", "modifiers": { "mandatory": [ "left_shift", "left_control", "left_option", "left_command" ], "optional": [ "caps_lock" ] } },
+          "to": [ { "shell_command": "open '/Applications/Slack.app'" } ]
+        },
+        {
+          "type": "basic",
+          "from": { "key_code": "v", "modifiers": { "mandatory": [ "left_shift", "left_control", "left_option", "left_command" ], "optional": [ "caps_lock" ] } },
+          "to": [ { "shell_command": "open /usr/local/Cellar/macvim/*/MacVim.app" } ]
+        },
+        {
+          "type": "basic",
+          "from": { "key_code": "c", "modifiers": { "mandatory": [ "left_shift", "left_control", "left_option", "left_command" ], "optional": [ "caps_lock" ] } },
+          "to": [ { "shell_command": "open '/Applications/Google Chrome.app'" } ]
+        }
+      ]
+    }
+  ]
+}
