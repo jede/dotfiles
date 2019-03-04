@@ -49,3 +49,9 @@
 [submodule "vim/janus/vim-jsx"]
 	path = vim/janus/vim-jsx
 	url = git@github.com:mxw/vim-jsx.git
+[submodule "vim/janus/auto-pairs"]
+	path = vim/janus/auto-pairs
+	url = git://github.com/jiangmiao/auto-pairs.git
+[submodule "vim/janus/vim-abolish"]
+	path = vim/janus/vim-abolish
+	url = git://github.com/tpope/tpope-vim-abolish.git

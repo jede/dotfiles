@@ -1,6 +1,17 @@
 set visualbell
 set iskeyword+=-
 
+"save in command mode
+nnoremap § :wa
+
+"Paste without moving the cursor
+nnoremap <Leader>p p`[
+nnoremap <Leader>P P`[
+
+"Delete without yanking
+nnoremap <leader>d "_d
+xnoremap <leader>d "_d
+
 "Split switching
 nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
@@ -15,14 +26,6 @@ nmap <CR> o<Esc>
 nnoremap <ESC> :nohlsearch<CR>
 
 
-" ruby-conque bindings
-"" Cmd-Shift-R for RSpec
-nmap <silent> <D-T> :call RunRspecCurrentFileConque()<CR>
-" Cmd-Shift-L for RSpec Current Line
-nmap <silent> <D-R> :call RunRspecCurrentLineConque()<CR>
-" Cmd-R for Last conque command
-nmap <silent> <D-E> :call RunLastConqueCommand()<CR>
-
 " Init ragtag for custom filetypes
 autocmd FileType jst call RagtagInit()
 
@@ -32,7 +35,21 @@ autocmd BufNewFile,BufRead *.scss setf scss
 " Autosave on blur
 autocmd FocusLost * silent! wa
 
+" improve js (coffee?) highlighting
 set lsp=2
+hi link jsObjectKey             Identifier
+hi link jsNoise                SpecialChar
+hi link jsBrackets             SpecialChar
+hi link jsParens               SpecialChar
+hi link jsBraces               SpecialChar
+hi link jsFuncBraces           SpecialChar
+hi link jsFuncParens           SpecialChar
+hi link jsClassBraces          SpecialChar
+hi link jsClassNoise           SpecialChar
+hi link jsObjectBraces         SpecialChar
+hi link jsObjectSeparator      SpecialChar
+hi link jsDestructuringBraces  SpecialChar
+
 color molokai
 if has("gui_running")
   set guifont=Inconsolata:h12
