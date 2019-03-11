@@ -55,3 +55,6 @@
 [submodule "vim/janus/vim-abolish"]
 	path = vim/janus/vim-abolish
 	url = git://github.com/tpope/tpope-vim-abolish.git
+[submodule "vim/jede/start/nerdtree"]
+	path = vim/jede/start/nerdtree
+	url = git://github.com/scrooloose/nerdtree.git
