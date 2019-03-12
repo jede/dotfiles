@@ -69,6 +69,8 @@ export PATH=$COCOS_TEMPLATES_ROOT:$PATH
 
 export POW_DOMAINS="dev,localhost,test"
 
+export FZF_DEFAULT_COMMAND="ag --hidden --ignore .git -g \"\""
+
 if [ -f `brew --prefix`/etc/autojump ]; then
   . `brew --prefix`/etc/autojump
 fi
@@ -91,5 +93,4 @@ if (( $+commands[rvm] )) ; then
 
 #  __rvm_project_rvmrc
 fi
-
 
