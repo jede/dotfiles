@@ -6,10 +6,49 @@ set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*/.tmp/*,*/tmp/*,tmp/*,*/temp/*,*/.jhw
 
 set grepprg=ack\ --nogroup\ --nocolor
 
-set number
-
 let mapleader = " "
 
+set number            " Show line numbers
+set ruler             " Show line and column number
+syntax enable         " Turn on syntax highlighting allowing local overrides
+
+""
+"" Whitespace
+""
+
+set nowrap                        " don't wrap lines
+set tabstop=2                     " a tab is two spaces
+set shiftwidth=2                  " an autoindent (with <<) is two spaces
+set expandtab                     " use spaces, not tabs
+set list                          " Show invisible characters
+set backspace=indent,eol,start    " backspace through everything in insert mode
+
+if exists("g:enable_mvim_shift_arrow")
+  let macvim_hig_shift_movement = 1 " mvim shift-arrow-keys
+endif
+
+" List chars
+set listchars=""                  " Reset the listchars
+set listchars=tab:\ \             " a tab should display as "  ", trailing whitespace as "."
+set listchars+=trail:.            " show trailing spaces as dots
+set listchars+=extends:>          " The character to show in the last column when wrap is
+                                  " off and the line continues beyond the right of the screen
+set listchars+=precedes:<         " The character to show in the last column when wrap is
+                                  " off and the line continues beyond the left of the screen
+
+""
+"" Searching
+""
+
+set hlsearch    " highlight matches
+set incsearch   " incremental searching
+set ignorecase  " searches are case insensitive...
+set smartcase   " ... unless they contain at least one capital letter
+
+
+""
+"" Plugins
+""
 
 set rtp+=/usr/local/opt/fzf
 
@@ -20,6 +59,23 @@ let g:jsx_ext_required = 0
 if executable('ag')
   let g:ackprg = 'ag --vimgrep'
 endif
+
+let g:lightline = {
+      \ 'colorscheme': 'monokai_tasty',
+      \ 'active': {
+      \   'left': [ [ 'mode', 'paste' ],
+      \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
+      \ },
+      \ 'component_function': {
+      \   'gitbranch': 'fugitive#head'
+      \ },
+      \ }
+set laststatus=2
+
+
+""
+"" Mappings
+""
 
 "save in command mode
 nnoremap § :wa
@@ -55,6 +111,7 @@ nnoremap <silent> <C-p> :FZF<CR>
 map <leader>n :NERDTreeToggle<CR>:NERDTreeMirror<CR>
 
 " Init ragtag for custom filetypes
+
 autocmd FileType jst call RagtagInit()
 
 " Find scss files
@@ -63,15 +120,14 @@ autocmd BufNewFile,BufRead *.scss setf scss
 " Autosave on blur
 autocmd FocusLost * silent! wa
 
+
+
+
 " improve js (coffee?) highlighting
 set lsp=2
 hi link jsObjectKey             Identifier
 hi link jsNoise                SpecialChar
 hi link jsBrackets             SpecialChar
-
-
-
-
 hi link jsParens               SpecialChar
 hi link jsBraces               SpecialChar
 hi link jsFuncBraces           SpecialChar
@@ -81,18 +137,6 @@ hi link jsClassNoise           SpecialChar
 hi link jsObjectBraces         SpecialChar
 hi link jsObjectSeparator      SpecialChar
 hi link jsDestructuringBraces  SpecialChar
-
-let g:lightline = {
-      \ 'colorscheme': 'monokai_tasty',
-      \ 'active': {
-      \   'left': [ [ 'mode', 'paste' ],
-      \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
-      \ },
-      \ 'component_function': {
-      \   'gitbranch': 'fugitive#head'
-      \ },
-      \ }
-set laststatus=2
 
 
 if has("gui_running")
