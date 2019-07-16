@@ -12,6 +12,10 @@ set number            " Show line numbers
 set ruler             " Show line and column number
 syntax enable         " Turn on syntax highlighting allowing local overrides
 
+filetype plugin on
+
+set matchpairs+=<:>
+
 ""
 "" Whitespace
 ""
@@ -22,6 +26,7 @@ set shiftwidth=2                  " an autoindent (with <<) is two spaces
 set expandtab                     " use spaces, not tabs
 set list                          " Show invisible characters
 set backspace=indent,eol,start    " backspace through everything in insert mode
+set autoindent
 
 if exists("g:enable_mvim_shift_arrow")
   let macvim_hig_shift_movement = 1 " mvim shift-arrow-keys
@@ -52,6 +57,17 @@ set smartcase   " ... unless they contain at least one capital letter
 
 set rtp+=/usr/local/opt/fzf
 
+let g:ale_linters = {
+\   'javascript': ['standard'],
+\}
+
+let g:ale_fixers = {
+\   'javascript': ['standard'],
+\}
+
+let g:ale_lint_on_save = 1
+let g:ale_fix_on_save = 1
+
 let g:syntastic_javascript_checkers = ['jsxhint']
 
 let g:jsx_ext_required = 0
@@ -72,13 +88,21 @@ let g:lightline = {
       \ }
 set laststatus=2
 
+let g:mkdx#settings     = { 'highlight': { 'enable': 1 },
+                        \ 'enter': { 'shift': 1 },
+                        \ 'links': { 'external': { 'enable': 1 } },
+                        \ 'toc': { 'text': 'Table of Contents', 'update_on_write': 1 },
+                        \ 'fold': { 'enable': 1 } }
+
+let g:polyglot_disabled = ['markdown']
 
 ""
 "" Mappings
 ""
 
-"save in command mode
+"save
 nnoremap § :wa
+nnoremap <Leader><CR> :wa
 
 "Paste without moving the cursor
 nnoremap <Leader>p p`[

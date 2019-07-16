@@ -103,9 +103,6 @@
 [submodule "vim/jede/start/vim-css-color"]
 	path = vim/jede/start/vim-css-color
 	url = git://github.com/ap/vim-css-color.git
-[submodule "vim/jede/start/VimCompletesMe"]
-	path = vim/jede/start/VimCompletesMe
-	url = git://github.com/ajh17/VimCompletesMe.git
 [submodule "vim/jede/start/greplace"]
 	path = vim/jede/start/greplace
 	url = git://github.com/yegappan/greplace.git
@@ -118,3 +115,12 @@
 [submodule "vim/jede/start/vim-visualstar"]
 	path = vim/jede/start/vim-visualstar
 	url = git://github.com/thinca/vim-visualstar.git
+[submodule "vim/jede/start/mkdx"]
+	path = vim/jede/start/mkdx
+	url = git://github.com/SidOfc/mkdx
+[submodule "vim/jede/start/vimproc"]
+	path = vim/jede/start/vimproc
+	url = git://github.com/Shougo/vimproc.vim.git
+[submodule "vim/jede/start/tsuquyomi"]
+	path = vim/jede/start/tsuquyomi
+	url = git://github.com/Quramy/tsuquyomi.git
