@@ -118,3 +118,13 @@
 [submodule "vim/jede/start/mkdx"]
 	path = vim/jede/start/mkdx
 	url = git://github.com/SidOfc/mkdx
+[submodule "vim/jede/start/coc"]
+	path = vim/jede/start/coc
+	url = git://github.com/neoclide/coc.nvim.git
+	branch = release
+[submodule "vim/jede/start/vim-rooter"]
+	path = vim/jede/start/vim-rooter
+	url = git://github.com/airblade/vim-rooter.git
+[submodule "vim/jede/start/vim-prittier"]
+	path = vim/jede/start/vim-prittier
+	url = https://github.com/prettier/vim-prettier.git
