@@ -31,6 +31,8 @@ source $ZSH/oh-my-zsh.sh
 bindkey "[D" backward-word
 bindkey "[C" forward-word
 
+alias mvim="mvim --remote-tab-silent "
+
 ZSH_THEME_GIT_PROMPT_PREFIX="%{$fg[green]%}[%{$fg[cyan]%}"
 ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color%}"
 ZSH_THEME_GIT_PROMPT_DIRTY="%{$fg[green]%}] %{$fg[yellow]%}*%{$reset_color%}"
@@ -117,3 +119,4 @@ if (( $+commands[rvm] )) ; then
 #  __rvm_project_rvmrc
 fi
 
+export PATH="/usr/local/opt/llvm/bin:$PATH"

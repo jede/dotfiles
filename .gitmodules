@@ -128,3 +128,6 @@
 [submodule "vim/jede/start/vim-prittier"]
 	path = vim/jede/start/vim-prittier
 	url = https://github.com/prettier/vim-prettier.git
+[submodule "vim/jede/start/vim-snippets"]
+	path = vim/jede/start/vim-snippets
+	url = https://github.com/honza/vim-snippets
