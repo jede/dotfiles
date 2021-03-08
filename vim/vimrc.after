@@ -50,7 +50,11 @@ hi link jsObjectBraces         SpecialChar
 hi link jsObjectSeparator      SpecialChar
 hi link jsDestructuringBraces  SpecialChar
 
-color molokai
+" color molokai
+let g:sonokai_style = 'atlantis'
+
+colorscheme sonokai
+
 if has("gui_running")
   set guifont=Inconsolata:h12
 endif

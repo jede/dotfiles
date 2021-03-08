@@ -79,7 +79,7 @@ if executable('ag')
 endif
 
 let g:lightline = {
-      \ 'colorscheme': 'monokai_tasty',
+      \ 'colorscheme': 'sonokai',
       \ 'active': {
       \   'left': [ [ 'mode', 'paste' ],
       \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
@@ -295,19 +295,19 @@ autocmd TabNew * silent! tcd %:p:h
 nmap <Leader>= <Plug>(Prettier)
 
 " improve js (coffee?) highlighting
-set lsp=2
-hi link jsObjectKey             Identifier
-hi link jsNoise                SpecialChar
-hi link jsBrackets             SpecialChar
-hi link jsParens               SpecialChar
-hi link jsBraces               SpecialChar
-hi link jsFuncBraces           SpecialChar
-hi link jsFuncParens           SpecialChar
-hi link jsClassBraces          SpecialChar
-hi link jsClassNoise           SpecialChar
-hi link jsObjectBraces         SpecialChar
-hi link jsObjectSeparator      SpecialChar
-hi link jsDestructuringBraces  SpecialChar
+" set lsp=2
+" hi link jsObjectKey             Identifier
+" hi link jsNoise                SpecialChar
+" hi link jsBrackets             SpecialChar
+" hi link jsParens               SpecialChar
+" hi link jsBraces               SpecialChar
+" hi link jsFuncBraces           SpecialChar
+" hi link jsFuncParens           SpecialChar
+" hi link jsClassBraces          SpecialChar
+" hi link jsClassNoise           SpecialChar
+" hi link jsObjectBraces         SpecialChar
+" hi link jsObjectSeparator      SpecialChar
+" hi link jsDestructuringBraces  SpecialChar
 
 
 if has("gui_running")
@@ -351,7 +351,10 @@ if has("gui_macvim")
 
 endif
 
-let g:vim_monokai_tasty_italic = 1
-colorscheme vim-monokai-tasty
+" let g:vim_monokai_tasty_italic = 1
+" colorscheme vim-monokai-tasty
 
+set termguicolors
+let g:sonokai_style = 'atlantis'
+colorscheme sonokai
 

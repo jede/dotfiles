@@ -120,3 +120,4 @@ if (( $+commands[rvm] )) ; then
 fi
 
 export PATH="/usr/local/opt/llvm/bin:$PATH"
+export PATH="/usr/local/opt/openjdk/bin:$PATH"

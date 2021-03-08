@@ -131,3 +131,9 @@
 [submodule "vim/jede/start/vim-snippets"]
 	path = vim/jede/start/vim-snippets
 	url = https://github.com/honza/vim-snippets
+[submodule "vim/jede/start/vim-commentary"]
+	path = vim/jede/start/vim-commentary
+	url = https://github.com/tpope/vim-commentary.git
+[submodule "vim/jede/start/sonokai"]
+	path = vim/jede/start/sonokai
+	url = https://github.com/sainnhe/sonokai.git
