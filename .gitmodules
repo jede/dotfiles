@@ -137,3 +137,6 @@
 [submodule "vim/jede/start/sonokai"]
 	path = vim/jede/start/sonokai
 	url = https://github.com/sainnhe/sonokai.git
+[submodule "vim/jede/start/vim-test"]
+	path = vim/jede/start/vim-test
+	url = https://github.com/vim-test/vim-test.git

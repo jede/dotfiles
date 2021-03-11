@@ -100,6 +100,9 @@ let g:mkdx#settings     = { 'highlight': { 'enable': 1 },
 let g:polyglot_disabled = ['markdown']
 au  BufNewFile,BufRead *.handlebars,*.hdbs,*.hbs,*.hb runtime! indent/handlebars.vim
 
+let test#strategy = 'iterm'
+
+let g:prettier#exec_cmd_path = "~/.nvm/versions/node/v14.15.5/bin/node ~/.nvm/versions/node/v14.15.5/bin/prettier"
 
 " Coc setup
 
@@ -277,6 +280,13 @@ nnoremap <silent> <C-p> :FZF<CR>
 map <leader>n :NERDTreeToggle<CR>
 let g:NERDTreeChDirMode = 2
 
+" VIM Test
+"
+map <leader>tr :TestNearest<CR>
+map <leader>tf :TestFile<CR>
+map <leader>ta :TestSuite<CR>
+map <leader>tt :TestLast<CR>
+
 " Init ragtag for custom filetypes
 
 autocmd FileType jst call RagtagInit()
@@ -293,6 +303,8 @@ autocmd TabNew * silent! tcd %:p:h
 
 " Prettier
 nmap <Leader>= <Plug>(Prettier)
+
+
 
 " improve js (coffee?) highlighting
 " set lsp=2
