@@ -140,3 +140,6 @@
 [submodule "vim/jede/start/vim-test"]
 	path = vim/jede/start/vim-test
 	url = https://github.com/vim-test/vim-test.git
+[submodule "vim/jede/start/vim-prettier"]
+	path = vim/jede/start/vim-prettier
+	url = https://github.com/prettier/vim-prettier.git

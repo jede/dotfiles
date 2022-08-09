@@ -24,7 +24,7 @@ ZSH_THEME="bira"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git osx autojump bower brew npm postgres jsontools)
+plugins=(git git-prompt macos autojump bower brew npm postgres jsontools)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -32,6 +32,7 @@ bindkey "[D" backward-word
 bindkey "[C" forward-word
 
 alias mvim="mvim --remote-tab-silent "
+alias k="kubectl"
 
 ZSH_THEME_GIT_PROMPT_PREFIX="%{$fg[green]%}[%{$fg[cyan]%}"
 ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color%}"
@@ -56,6 +57,7 @@ fi
 
 export PATH=/usr/local/bin:/usr/local/sbin:/usr/local/mysql/bin:~/bin:$PATH
 export PATH=/Applications/Firefox.app/Contents/MacOS:$PATH
+export PATH=/usr/local/opt/ruby/bin:$PATH
 export PATH=/usr/local/share/npm/bin:$PATH
 export PATH=node_modules/.bin:$PATH
 
@@ -78,7 +80,7 @@ if [ -f `brew --prefix`/etc/autojump ]; then
 fi
 
 PROMPT=' %{$fg_no_bold[cyan]%}■%{$fg_no_bold[default]%} '
-RPROMPT="${current_dir} ${git_branch}"
+RPROMPT="${current_dir}%{$fg[blue]%}%D{%X} ${vcs_branch}%{$reset_color%}"
 
 if (( $+commands[rbenv] )) ; then
   eval "$(rbenv init -)"
@@ -111,13 +113,13 @@ add-zsh-hook chpwd load-nvmrc
 load-nvmrc
 
 
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
-if (( $+commands[rvm] )) ; then
-  rvm_ruby='%{$fg[red]%}‹$(rvm-prompt i v g)›%{$reset_color%}'
-#  export RPROMPT="${current_dir} ${rvm_ruby} ${git_branch}"
+# PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+# if (( $+commands[rvm] )) ; then
+#   rvm_ruby='%{$fg[red]%}‹$(rvm-prompt i v g)›%{$reset_color%}'
+# #  export RPROMPT="${current_dir} ${rvm_ruby} ${git_branch}"
 
-#  __rvm_project_rvmrc
-fi
+# #  __rvm_project_rvmrc
+# fi
 
 export PATH="/usr/local/opt/llvm/bin:$PATH"
 export PATH="/usr/local/opt/openjdk/bin:$PATH"

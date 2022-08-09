@@ -1,6 +1,9 @@
 set visualbell
 set noswapfile
 
+runtime autoload/sonokai.vim
+call sonokai#get_configuration()
+
 set iskeyword+=-
 set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*/.tmp/*,*/tmp/*,tmp/*,*/temp/*,*/.jhw-cache/*,*/.build/*,*/.meteor/*,*/node_modules/*,*/coverage/*,*/out/*
 
@@ -58,6 +61,7 @@ set smartcase   " ... unless they contain at least one capital letter
 ""
 
 set rtp+=/usr/local/opt/fzf
+
 
 let g:ale_linters = {
 \   'javascript': ['standard'],
