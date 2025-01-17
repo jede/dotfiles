@@ -93,3 +93,9 @@
 [submodule "vim/jede/start/vim-prettier"]
 	path = vim/jede/start/vim-prettier
 	url = https://github.com/prettier/vim-prettier.git
+[submodule "vim/jede/start/sonokai"]
+	path = vim/jede/start/sonokai
+	url = git@github.com:sainnhe/sonokai.git
+[submodule "vim/jede/start/vim-styled-jsx"]
+	path = vim/jede/start/vim-styled-jsx
+	url = git@github.com:alampros/vim-styled-jsx
