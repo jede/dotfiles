@@ -34,6 +34,8 @@ bindkey "[C" forward-word
 alias mvim="mvim --remote-tab-silent "
 alias k="kubectl"
 
+export EDITOR=nvim
+
 ZSH_THEME_GIT_PROMPT_PREFIX="%{$fg[green]%}[%{$fg[cyan]%}"
 ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color%}"
 ZSH_THEME_GIT_PROMPT_DIRTY="%{$fg[green]%}] %{$fg[yellow]%}*%{$reset_color%}"

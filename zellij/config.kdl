@@ -143,27 +143,40 @@ keybinds clear-defaults=true {
         bind "Alt [" { PreviousSwapLayout; }
         bind "Alt ]" { NextSwapLayout; }
         bind "Alt g" { ToggleFloatingPanes; }
-        bind "Alt f" { SwitchToMode "entersearch"; SearchInput 0; }
-        bind "Alt C" { EditScrollback; SwitchToMode "locked"; }
+        bind "Super f" { SwitchToMode "entersearch"; SearchInput 0; }
+        bind "Super C" { EditScrollback; SwitchToMode "locked"; }
+        bind "Super w" { CloseFocus; SwitchToMode "locked"; }
         //bind "Alt h" { MoveFocusOrTab "left"; }
-        bind "Alt i" { MoveTab "left"; }
-        bind "Alt j" { MoveFocus "down"; }
-        bind "Alt k" { MoveFocus "up"; }
+        // bind "Alt j" { MoveFocus "down"; }
+        // bind "Alt k" { MoveFocus "up"; }
         //bind "Alt l" { MoveFocusOrTab "right"; }
-        bind "Alt n" { NewPane; }
-        bind "Alt t" { NewTab; }
-        bind "Alt o" { MoveTab "right"; }
+        bind "Super d" { NewPane; }
+        bind "Super t" { NewTab; }
+        bind "Super i" { MoveTab "left"; }
+        bind "Super o" { MoveTab "right"; }
+
+        // bind "Ctrl h" { MoveFocusOrTab "left"; }
+        // bind "Ctrl j" { MoveFocus "down"; }
+        // bind "Ctrl k" { MoveFocus "up"; }
+        // bind "Ctrl l" { MoveFocusOrTab "right"; }
+
+        bind "Super Alt left" { GoToPreviousTab; }
+        bind "Super Alt right" { GoToNextTab; }
+
+        bind "Super 1" { GoToTab 1; }
+        bind "Super 2" { GoToTab 2; }
+        bind "Super 3" { GoToTab 3; }
+        bind "Super 4" { GoToTab 4; }
+        bind "Super 5" { GoToTab 5; }
+        bind "Super 6" { GoToTab 6; }
+        bind "Super 7" { GoToTab 7; }
+        bind "Super 8" { GoToTab 8; }
+        bind "Super 9" { GoToTab 9; }
+        bind "Super 0" { GoToTab 10; }
 
 
-        bind "Alt 1" { GoToTab 1; }
-        bind "Alt 2" { GoToTab 2; }
-        bind "Alt 3" { GoToTab 3; }
-        bind "Alt 4" { GoToTab 4; }
-        bind "Alt 5" { GoToTab 5; }
-        bind "Alt 6" { GoToTab 6; }
-        bind "Alt 7" { GoToTab 7; }
-        bind "Alt 8" { GoToTab 8; }
-        bind "Alt 9" { GoToTab 9; }
+        bind "Super j" { HalfPageScrollDown; }
+        bind "Super k" { HalfPageScrollUp; }
     }
     shared_except "locked" "renametab" "renamepane" {
         bind "Ctrl g" { SwitchToMode "locked"; }
@@ -228,76 +241,76 @@ keybinds clear-defaults=true {
 
     shared {
 
-        bind "Alt h" {
+        bind "Ctrl h" {
             MessagePlugin "https://github.com/hiasr/vim-zellij-navigator/releases/download/0.2.1/vim-zellij-navigator.wasm" {
                 name "move_focus_or_tab";
                 payload "left";
 
                 // Plugin Configuration
-                move_mod "alt"; // Optional, should be added on every command if you want to use it
+                move_mod "ctrl"; // Optional, should be added on every command if you want to use it
             };
         }
 
-        bind "Alt j" {
+        bind "Ctrl j" {
             MessagePlugin "https://github.com/hiasr/vim-zellij-navigator/releases/download/0.2.1/vim-zellij-navigator.wasm" {
                 name "move_focus";
                 payload "down";
 
-                move_mod "alt";
+                move_mod "ctrl";
             };
         }
 
-        bind "Alt k" {
+        bind "Ctrl k" {
             MessagePlugin "https://github.com/hiasr/vim-zellij-navigator/releases/download/0.2.1/vim-zellij-navigator.wasm" {
                 name "move_focus";
                 payload "up";
 
-                move_mod "alt";
+                move_mod "ctrl";
             };
         }
 
-        bind "Alt l" {
+        bind "Ctrl l" {
             MessagePlugin "https://github.com/hiasr/vim-zellij-navigator/releases/download/0.2.1/vim-zellij-navigator.wasm" {
                 name "move_focus_or_tab";
                 payload "right";
 
-                move_mod "alt";
+                move_mod "ctrl";
             };
         }
 
-        bind "Alt H" {
+        bind "Ctrl H" {
             MessagePlugin "https://github.com/hiasr/vim-zellij-navigator/releases/download/0.2.1/vim-zellij-navigator.wasm" {
                 name "resize";
                 payload "left";
 
-                resize_mod "alt"; // Optional, should be added on every command if you want to use it
+                resize_mod "ctrl"; // Optional, should be added on every command if you want to use it
             };
         }
 
-        bind "Alt J" {
+        bind "Ctrl J" {
             MessagePlugin "https://github.com/hiasr/vim-zellij-navigator/releases/download/0.2.1/vim-zellij-navigator.wasm" {
                 name "resize";
                 payload "down";
 
-                resize_mod "alt";
+                resize_mod "ctrl";
             };
         }
 
-        bind "Alt K" {
+        bind "Ctrl K" {
             MessagePlugin "https://github.com/hiasr/vim-zellij-navigator/releases/download/0.2.1/vim-zellij-navigator.wasm" {
                 name "resize";
                 payload "up";
 
-                resize_mod "alt";
+                resize_mod "ctrl";
             };
         }
 
-        bind "Alt L" {
+        bind "Ctrl L" {
             MessagePlugin "https://github.com/hiasr/vim-zellij-navigator/releases/download/0.2.1/vim-zellij-navigator.wasm" {
                 name "resize";
                 payload "right";
 
-                resize_mod "alt";
+                resize_mod "ctrl";
             };
         }
     }
